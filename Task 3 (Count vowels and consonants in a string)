@@ -1,0 +1,26 @@
+data = input("Введи літери через пробіл: ").strip().split()
+
+# Визначення категорій літер
+loud = ("а", "е", "є", "и", "і", "ї", "о", "у", "ю", "я")
+consonant = ("б", "в", "г", "ґ", "д", "ж", "з", "к", "л", "м", "н", "п", "р", "с", "т", "ф", "х", "ц", "ч", "ш", "щ")
+soft_sign = ("ь")
+
+# Лічильники
+count_loud = 0
+count_consonant = 0
+count_soft_sign = 0
+
+# Перевірка кожної літери
+for letter in data:
+    letter = letter.lower()  # Приводимо літеру до нижнього регістру
+    if letter in loud:
+        count_loud += 1
+    elif letter in consonant:
+        count_consonant += 1
+    elif letter in soft_sign:
+        count_soft_sign += 1
+
+# Виведення результатів
+print(f"Кількість голосних: {count_loud}")
+print(f"Кількість приголосних: {count_consonant}")
+print(f"Кількість м'яких знаків: {count_soft_sign}")
