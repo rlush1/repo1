@@ -1,0 +1,10 @@
+number = float(input("Введіть число для перевірки: "))
+
+# Перевіряємо, чи є число цілим
+if number.is_integer():
+    if number % 2 == 0:
+        print("Число парне")
+    else:
+        print("Число непарне")
+else:
+    print("Введене число не є цілим")
