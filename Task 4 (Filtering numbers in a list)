@@ -1,0 +1,15 @@
+def check_even(number):
+    if number % 2 == 0:
+          return True  
+ 
+    return False
+
+numbers = input("Введіть послідовність чисел для відокремлення парних чисел: ").split() 
+
+numbers = list(map(int, numbers))
+
+even_numbers_iterator = filter(check_even, numbers)
+
+even_numbers = list(even_numbers_iterator)
+
+print(even_numbers)
