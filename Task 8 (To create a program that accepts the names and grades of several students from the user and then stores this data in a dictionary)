@@ -1,0 +1,27 @@
+students = {}
+
+print("Введіть ім'я та оцінку студента через пробіл (або 'stop' для завершення):")
+while True:
+    data = input("• ")
+    if data.lower() == "stop":
+        break  
+    try:
+        name, score = data.split()  
+        score = float(score) 
+        students[name] = score  
+    except ValueError:
+        print("Помилка! Будь ласка, введіть ім'я та оцінку через пробіл.")
+
+print("\nРезультати:")
+for name, score in students.items():
+    print(f"{name}: {score}")
+
+while True:
+    search_name = input("\nВведіть ім'я для перевірки оцінки (або 'stop' для завершення): ")
+    if search_name.lower() == "stop":
+        print("Пошук завершено.")
+        break  
+    if search_name in students:
+        print(f"Оцінка студента {search_name}: {students[search_name]}")
+    else:
+        print(f"Студента з ім'ям {search_name} не знайдено.")
