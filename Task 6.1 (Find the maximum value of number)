@@ -1,0 +1,16 @@
+try:
+    numbers = list(map(float, input("Введіть числа через пробіл: ").split()))
+except ValueError:
+    print("Будь ласка, введіть коректні числа.")
+    exit()
+
+max_number = max(numbers)
+
+formatted_numbers = [
+    int(num) if num.is_integer() else round(num, 2) for num in numbers
+]
+
+if max_number.is_integer():
+    print(f"Серед чисел {formatted_numbers}, найбільше: {int(max_number)}")
+else:
+    print(f"Серед чисел {formatted_numbers}, найбільше: {round(max_number, 2)}")
