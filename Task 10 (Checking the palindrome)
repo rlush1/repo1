@@ -1,0 +1,10 @@
+def is_palindrome(string):
+    clean_string = ''.join(string.lower().split())
+    return clean_string == clean_string[::-1]
+
+user_input = input("Введіть рядок для перевірки на паліндром: ")
+
+if is_palindrome(user_input):
+    print("Це паліндром!")
+else:
+    print("Це не паліндром.")
