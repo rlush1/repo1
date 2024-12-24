@@ -1,0 +1,9 @@
+try:
+    numbers = set(map(float, input("Введіть числа через пробіл: ").split()))
+except ValueError:
+    print("Будь ласка, введіть коректні числа.")
+    exit()
+    
+sort_numbers = sorted(numbers)
+
+print(sort_numbers)
