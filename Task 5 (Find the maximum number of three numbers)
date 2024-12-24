@@ -1,0 +1,14 @@
+x = float(input("Введіть перше число: "))
+y = float(input("Введіть друге число: "))
+z = float(input("Введіть третє число: "))
+
+numbers = [x, y, z]
+
+max_number = max(numbers)
+
+
+if max_number.is_integer():
+    print("Результат: ", int(max_number))
+    
+else:
+     print("Результат: ", round(max_number, 2))
