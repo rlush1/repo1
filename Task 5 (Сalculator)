@@ -1,0 +1,31 @@
+x = float(input("Введіть перше число: "))
+y = float(input("Введіть друге число: "))
+
+plus_sign = x + y
+minus_sign = x - y
+multiplication_sign = x * y
+division_sign = x / y
+
+symbols = input("Введіть математичний символ (+, -, *, або /): ")
+
+if symbols not in ["+", "-", "*", "/"]:
+    print("Некоректний символ. Використовуйте (+, -, *, або /).")
+else:
+    if symbols == "+":
+        result = plus_sign
+    elif symbols == "-":
+        result = minus_sign
+    elif symbols == "*":
+        result = multiplication_sign
+    elif symbols == "/":
+        if y != 0:
+            result = division_sign
+        else:
+            print("Помилка: ділення на нуль.")
+            result = None
+    
+    if result is not None:
+        if result.is_integer():  
+            print("Результат: ", int(result)) 
+        else:
+            print("Результат: ", round(result, 2))
